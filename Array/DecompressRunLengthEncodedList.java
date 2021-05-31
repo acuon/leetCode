@@ -53,6 +53,17 @@ class Solution {
 }
 
 /*
+     ArrayList<Integer> ar=new ArrayList<Integer>();
+        for(int i=0;i<nums.length;i++){
+            for(int j=0;j<nums[i];j++){
+                ar.add(nums[i+1]);
+            }
+            i++;
+        }
+        
+*/
+/*
+
 class Solution {
     public int[] decompressRLElist(int[] nums) {
         int len = 0;
