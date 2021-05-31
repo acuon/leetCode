@@ -53,7 +53,7 @@ class Solution {
 }
 
 /*
-     ArrayList<Integer> ar=new ArrayList<Integer>();
+        ArrayList<Integer> ar=new ArrayList<Integer>();
         for(int i=0;i<nums.length;i++){
             for(int j=0;j<nums[i];j++){
                 ar.add(nums[i+1]);
