@@ -1,4 +1,6 @@
 /*
+//https://leetcode.com/problems/count-good-triplets/
+
 Given an array of integers arr, and three integers a, b and c. You need to find the number of good triplets.
 
 A triplet (arr[i], arr[j], arr[k]) is good if the following conditions are true:
