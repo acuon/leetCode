@@ -36,9 +36,10 @@ Constraints:
 
 
 */
-
-
 //Using HashMap
+
+//Tutorial:-- https://www.youtube.com/watch?v=TcsYEnMrnFo
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
 //         Map<Integer, Integer> map = new HashMap<>();
@@ -64,7 +65,6 @@ class Solution {
 }
 
 
-
 //Using Arrays
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -86,6 +86,4 @@ class Solution {
     return output;    
     }
 }
-
-
 
