@@ -45,7 +45,6 @@ Constraints:
     1 <= m + n <= 2000
     -10^6 <= nums1[i], nums2[i] <= 10^6
 
-
 */
 
 class Solution {
