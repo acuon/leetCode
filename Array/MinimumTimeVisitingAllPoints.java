@@ -37,7 +37,7 @@ Constraints:
     -1000 <= points[i][0], points[i][1] <= 1000
 
 */
-
+//Method 1:-
 class Solution {
     public int minTimeToVisitAllPoints(int[][] points) {
         int min_time = 0;
@@ -47,5 +47,27 @@ class Solution {
             min_time += Math.max(x,y);
         }
         return min_time;
+    }
+}
+
+
+//Method 2:-
+class Solution {
+    public int minTimeToVisitAllPoints(int[][] points) {
+        int min_time = 0;
+        for(int i=0; i<points.length-1; i++) {
+            int sec = calculate(points[i], points[i+1]);
+            //System.out.println(sec);
+            min_time += sec;
+        }
+        
+        return min_time;
+    }
+    
+    public int calculate(int[] first, int[] second) {
+        int diagDist = Math.min(Math.abs(first[0]-second[0]), Math.abs(first[1]-second[1]));
+        int distance = diagDist + (Math.abs(first[0]-second[0]) - diagDist)+(Math.abs(first[1]-second[1]) - diagDist);
+        //System.out.println(diagDist+" "+distance);
+        return distance;
     }
 }
