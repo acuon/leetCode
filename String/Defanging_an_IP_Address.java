@@ -25,6 +25,17 @@ Constraints:
 
 class Solution {
     public String defangIPaddr(String address) {
+//         address = address.replace(".","[.]");
+//         return address;
+        return address.replace(".","[.]");
+    }
+}
+
+
+
+//Brute force
+class Solution {
+    public String defangIPaddr(String address) {
         String str = "";
         for(int i=0; i<address.length(); i++) {
             if(address.charAt(i)=='.') {
