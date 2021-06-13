@@ -34,7 +34,23 @@ Constraints:
     1 <= nums[i] <= 100
 */
 
+//Method 1
+class Solution {
+    public int numIdenticalPairs(int[] nums) {
+        Arrays.sort(nums);
+        int count = 0;
+        for(int i=1, j=0; i<nums.length; i++) {
+            if(nums[i-1]==nums[i]) {
+                count += 1 + j++;
+            }
+            else j = 0;
+        }
+        return count;
+    }
+}
 
+
+//Method 2
 class Solution {
     public int numIdenticalPairs(int[] nums) {
         int count = 0;
