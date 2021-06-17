@@ -77,27 +77,43 @@ class Solution {
 //less time complexity
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int n = nums1.length>nums2.length?nums1.length:nums2.length;
-        ArrayList<Integer> ar = new ArrayList<Integer>();
-        for(int i=0; i<n; i++) {
-            if(i<nums1.length) {
-                ar.add(nums1[i]);
+        int n = nums1.length + nums2.length;
+        ArrayList<Integer> arr = new ArrayList<>();
+        
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        int limit = (n)/2 + 1;
+        
+        while (i < nums1.length && j < nums2.length && k < limit) {
+            if (nums1[i] < nums2[j]) {
+                arr.add(nums1[i]);
+                i++;
             }
-            if(i<nums2.length) {
-                ar.add(nums2[i]);
+            else {
+                arr.add(nums2[j]);
+                j++;
             }
-        }
-        Collections.sort(ar);
-        double median = 0.0;
-        int size = ar.size();
-        if(size%2==0) {
-            median = (ar.get(size/2) + ar.get((size/2)-1));
-            median = median/2;
-        }
-        if(size%2==1) {
-            median = ar.get((size-1)/2);
+            k++;
         }
         
-        return median;
+        if (i < nums1.length) {
+            while (i < nums1.length && k < limit) {
+                arr.add(nums1[i]);
+                i++;
+                k++;
+            }
+        }
+        else {
+            while (j < nums2.length && k < limit) {
+                arr.add (nums2[j]);
+                j++;
+                k++;
+            }
+        }
+        
+        k--;
+        
+        return n%2 == 0 ? (double) (arr.get(k - 1) + arr.get(k)) / 2.0 : (double) arr.get(k);
     }
 }
