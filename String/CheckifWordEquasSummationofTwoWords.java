@@ -43,7 +43,6 @@ The numerical value of firstWord is "aaa" -> "000" -> 0.
 The numerical value of secondWord is "a" -> "0" -> 0.
 The numerical value of targetWord is "aaaa" -> "0000" -> 0.
 We return true because 0 + 0 == 0.
-
  
 
 Constraints:
