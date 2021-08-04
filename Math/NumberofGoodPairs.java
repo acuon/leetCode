@@ -2,6 +2,7 @@
 //https://leetcode.com/problems/number-of-good-pairs/
 
 
+
 Number of Good Pairs
 
 Given an array of integers nums.
