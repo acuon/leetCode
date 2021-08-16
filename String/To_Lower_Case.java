@@ -32,3 +32,16 @@ class Solution {
         return s.toLowerCase();
     }
 }
+
+//using ASCII 
+class Solution {
+    public String toLowerCase(String s) {
+        char[] ar = s.toCharArray();
+        for(int i=0; i<ar.length; i++) {
+            if(ar[i]>=65 && ar[i]<=90) {
+                ar[i] = (char)(ar[i]+32);
+            }
+        }
+        return new String(ar);
+    }
+}
