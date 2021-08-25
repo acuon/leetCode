@@ -12,7 +12,7 @@ Also, if a player cannot make a move, they lose the game.
 
 Return true if and only if Alice wins the game, assuming both players play optimally.
 
- 
+
 
 Example 1:
 
