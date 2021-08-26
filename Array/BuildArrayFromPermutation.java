@@ -7,7 +7,6 @@ Given a zero-based permutation nums (0-indexed), build an array ans of the same 
 A zero-based permutation nums is an array of distinct integers from 0 to nums.length - 1 (inclusive).
 
  
-
 Example 1:
 
 Input: nums = [0,2,1,5,3,4]
