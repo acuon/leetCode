@@ -39,7 +39,7 @@ Constraints:
     1 <= nums[i] <= 1000
 */
 
-
+//0ms Runtime
 class Solution {
     public int findGCD(int[] nums) {
         int min = Integer.MAX_VALUE;
