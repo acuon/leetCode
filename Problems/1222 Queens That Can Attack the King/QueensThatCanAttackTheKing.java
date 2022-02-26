@@ -18,22 +18,15 @@ class Solution {
                 break;
             }
         }
+        //up
+        for(int i=king[0]; i>=0; i--) {
+            if(board[i][king[1]] == 1) {
+                arr.add(List.of(i, king[1]));
+                break;
+            }
+        }
         //up right diagonal
         for(int i=king[0], j=king[1]; i>=0 && j<8; i--, j++) {
-            if(board[i][j] == 1) {
-                arr.add(List.of(i, j));
-                break;
-            }
-        }
-        //down left diagonal
-        for(int i=king[0], j=king[1]; i<8 && j>=0; i++, j--) {
-            if(board[i][j] == 1) {
-                arr.add(List.of(i, j));
-                break;
-            }
-        }
-        //down right diagonal
-        for(int i=king[0], j=king[1]; i<8 && j<8; i++, j++) {
             if(board[i][j] == 1) {
                 arr.add(List.of(i, j));
                 break;
@@ -53,10 +46,10 @@ class Solution {
                 break;
             }
         }
-        //up
-        for(int i=king[0]; i>=0; i--) {
-            if(board[i][king[1]] == 1) {
-                arr.add(List.of(i, king[1]));
+        //down left diagonal
+        for(int i=king[0], j=king[1]; i<8 && j>=0; i++, j--) {
+            if(board[i][j] == 1) {
+                arr.add(List.of(i, j));
                 break;
             }
         }
@@ -64,6 +57,13 @@ class Solution {
         for(int i=king[0]; i<8; i++) {
             if(board[i][king[1]] == 1) {
                 arr.add(List.of(i, king[1]));
+                break;
+            }
+        }
+        //down right diagonal
+        for(int i=king[0], j=king[1]; i<8 && j<8; i++, j++) {
+            if(board[i][j] == 1) {
+                arr.add(List.of(i, j));
                 break;
             }
         }
