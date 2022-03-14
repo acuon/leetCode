@@ -14,6 +14,7 @@ class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if(list1 == null) return list2;
         else if(list2 == null) return list1;
+        
         ListNode temp, head;
         temp = head = new ListNode(0);
         while(list1!=null && list2!=null) {
