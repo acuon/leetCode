@@ -4,13 +4,11 @@ class Solution {
     public String removeDuplicates(String s, int k) {
         Stack<Char> st = new Stack<>();
         for(char ch: s.toCharArray()) {
-            if(!st.isEmpty()) {
-                if(st.peek().ch == ch && st.peek().count == k-1) {
+            if(!st.isEmpty() && st.peek().ch == ch) {
+                if(st.peek().count == k-1) {
                     st.pop();
-                } else if(st.peek().ch == ch) {
-                    st.peek().countIncrement();
                 } else {
-                    st.push(new Char(ch));
+                    st.peek().countIncrement();
                 }
             } else {
                 st.push(new Char(ch));
