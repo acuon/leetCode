@@ -24,8 +24,7 @@ class Solution {
         // System.out.println(nth);
         while(res != null){
             nth--;
-            if(nth == 0 && res.next.next != null) res.next = res.next.next;
-            else if(nth == 0) res.next = null;
+            if(nth == 0) res.next = res.next.next;
             res = res.next;
         }
         return head;
