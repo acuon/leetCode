@@ -1,0 +1,35 @@
+//https://leetcode.com/problems/intersection-of-two-linked-lists/
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        // Set<ListNode> set = new HashSet<>();
+        // ListNode temp = headA;
+        // while(temp!=null) {
+        //     set.add(temp);
+        //     temp = temp.next;
+        // }
+        // temp = headB;
+        // while(temp!=null) {
+        //     if(!set.add(temp)) return temp;
+        //     temp = temp.next;
+        // }
+        // return null;
+        ListNode a = headA, b = headB;
+        while(a != b) {
+            a = a == null ? headB : a.next;
+            b = b == null ? headA : b.next;
+        }
+        return a;
+    }
+}
