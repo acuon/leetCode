@@ -7,13 +7,14 @@ class Solution {
         for(int n: nums) {
             set.add(n);
         }
+        int num = 0;
         for(int n: set) {
             if(!set.contains(n-1)) {
-                int m = n+1;
-                while(set.contains(m)) {
-                    m++;
+                num = n+1;
+                while(set.contains(num)) {
+                    num++;
                 }
-                longest = Math.max(longest, m-n);
+                longest = Math.max(longest, num-n);
             }
         }
         return longest;
