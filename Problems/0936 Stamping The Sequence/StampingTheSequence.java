@@ -13,6 +13,7 @@ class Solution {
     
     //this is the approach we would be following
     //carefully read the code to better understand the approach
+    
     public int[] movesToStamp(String stamp, String target) {
         //reverse engineering should be used
         //start from T and convert it to all stars
