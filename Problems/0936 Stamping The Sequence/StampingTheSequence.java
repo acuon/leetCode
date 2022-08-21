@@ -13,14 +13,13 @@ class Solution {
     
     //this is the approach we would be following
     //carefully read the code to better understand the approach
-    
     public int[] movesToStamp(String stamp, String target) {
         //reverse engineering should be used
         //start from T and convert it to all stars
         //if it is not possible, then return empty array
 
-        char S[]=stamp.toCharArray();
-        char T[]=target.toCharArray();
+        char[] S=stamp.toCharArray();
+        char[] T=target.toCharArray();
         ArrayList<Integer> arr=new ArrayList<>();
         //checking if we have already checked this index
         boolean visited[]=new boolean[T.length-S.length+1];
@@ -52,7 +51,7 @@ class Solution {
             }
         }
         
-        int ans[]=new int[arr.size()];
+        int[] ans=new int[arr.size()];
         for(int i=0;i<ans.length;i++){
             ans[i]=arr.get(arr.size()-i-1);
         }
@@ -61,7 +60,7 @@ class Solution {
     }
 
     //checking if this substring follows the pattern of S
-    private boolean check(char S[],char T[],int ind){
+    private boolean check(char[] S, char[] T, int ind){
         for(int i=0;i<S.length;i++){
             if(T[i+ind]!='*' && S[i]!=T[i+ind]){
                 return false;
@@ -71,7 +70,7 @@ class Solution {
         return true;
     }
     //replacing characters with stars
-    private int  replace(char S[],char T[],int ind){
+    private int  replace(char[] S, char[] T, int ind){
         int count=0;
         for(int i=0;i<S.length;i++){
             if(T[i+ind]!='*'){
